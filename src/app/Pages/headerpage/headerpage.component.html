@@ -1,0 +1,30 @@
+
+
+<header> 
+    <div class="Logo"> 
+     <img src="../assets/images/LuckyTrip_Logo_Small-1.png">
+    </div>
+     <div class="p-5 text-center Header">
+       <h1 class="mb-3" style="color: aliceblue;">Search LuckyTrip  </h1>
+       <h4 class="mb-3" style="color: aliceblue;">{{item}} destinations   <i class="fa fa-search" aria-hidden="true"></i>  , 1500 blog posts , Unlimited Trips</h4>
+       <div class="row">
+         <div class="col-xs-5 col-sm-5 col-md-5"> 
+         </div>
+       <div class="col-xs-7 col-sm-7 col-md-7"> 
+           <div class="input-group">
+             <div class="form-outline">
+              <span class="icon-search headerSearch"></span>
+               <input type="text" [(ngModel)]="SearcValue"  style="background: rgb(203 208 216 / 52%); border-radius: 16px 16px 16px 16px;width: 227px;
+               padding-left: 32px;" placeholder="Enter a destinations" class="form-control" /> 
+               <button class="ButtonCss" (click)="SearchEngin(this.SearcValue)" > Go</button>
+             
+             </div>
+           
+           </div>   
+       </div>
+       </div>
+      
+     </div>
+     
+   
+   </header>

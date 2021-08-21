@@ -1,0 +1,18 @@
+<app-headerpage  [item]="CountDestination" (newItemEvent)="SearchEnginparent($event)"></app-headerpage>
+   <body class="body">
+     <div class="container">
+       <div>
+         <div class="title" >Trending</div>
+       </div>
+       <div class="row row-cols-3" >
+         <div class="col-md-4" *ngFor="let item of ResultDestnation; index as i;">
+           <img class="imgClass" src="{{item.image_url}}"  (click)="GetDestinationDetails(item.id)" >
+         </div>
+         
+       </div>
+     </div>
+   </body>
+   
+   
+  
+   

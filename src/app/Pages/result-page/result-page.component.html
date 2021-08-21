@@ -1,0 +1,52 @@
+
+
+<header class="Header"  > 
+    <div class="Logo" style="width: 100%;height: auto;"> 
+     <img  (click)="GetLuckyStatred();" src="../assets/images/LuckyTrip_Logo_Small-1.png">
+       <div class="form-outline" style="margin-top: 11px;height: auto; width: 50%; left: -127px; position: relative; float: right;">
+               <span class="icon-search headerSearch"></span>
+               <input type="text" [(ngModel)]="SearcValue"  style="background: rgb(203 208 216 / 52%); border-radius: 16px 16px 16px 16px;width: 227px;padding-left: 32px;" placeholder=" Enter a destinations" class="form-control" /> 
+               <button class="ButtonCss" (click)="SearchEnginByName(this.SearcValue)"  style="position: relative;left: 165px;"> Go</button>
+             
+             </div>  
+    </div>
+     <div class="p-5 text-center Header" style="background: url({{this.ImgUrl}}) no-repeat center center;background-size: cover !important;">
+        <div style="    margin-top: 213px;">
+            <h1 class="mb-3" style="color: aliceblue;">{{CityName}} </h1>
+            <h4 class="mb-3" style="color: aliceblue;">{{CountryName}}</h4>
+        </div>
+ 
+     </div>
+     
+   
+   </header>
+   <body class="body">
+     <div class="container" >
+        
+      <div style="margin-top: 40px;">
+        <span style="color: yellow;font-size: 22px;" >  What Its Like ? </span>
+      </div>
+      <div>
+        <span style="color: white; display: flex;" >
+          {{this.Description}}
+        </span>
+      </div>
+       <div>
+         <div class="title" >Blog Posts</div>
+       </div>
+       <div class="row row-cols-3" >
+         <div class="col-md-4 col-sm-6 col-12" *ngFor="let item of Activitas; index as i;" >
+           <img class="imgClass" src="{{item.thumbnail.image_url}}"  >
+         </div>
+        
+         
+       </div>
+       <div class="Footer" >
+       
+        <h1 class="mb-3" style="text-align: center; color: red;">Find a Trip To {{CityName}} </h1>
+        <h5 class="mb-3" style="text-align: center; color: aliceblue;">Tab To Lucky button to Get Started</h5>
+        <img class="object" (click)="GetLuckyStatred()" style="position: relative; left: 41%;    margin-top: 61px;" src="../../../assets/images/lucky_button.png">
+      </div>
+     </div>
+   </body>
+    
